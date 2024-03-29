@@ -8,6 +8,7 @@ enum Color {
 class Piece{
 public:
     void movePiece();
+    bool checkLegalMove();
 
 private:
 
@@ -15,7 +16,8 @@ private:
 
 class King : public Piece{
 public:
-    bool checkLegalMove(){};
+    bool checkLegalMove();
+    bool isInCheck();
 
 private:
     Color color;
@@ -23,7 +25,7 @@ private:
 
 class Queen : public Piece{
 public:
-    bool checkLegalMove(){}
+    bool checkLegalMove();
 
 private:
     Color color;
@@ -31,7 +33,7 @@ private:
 
 class Bishop : public Piece{
 public:
-    bool checkLegalMove(){}
+    bool checkLegalMove();
 
 private:
     Color color;
@@ -39,7 +41,7 @@ private:
 
 class Rook : public Piece{
 public:
-    bool checkLegalMove(){}
+    bool checkLegalMove();
 
 private:
     Color color;
@@ -47,7 +49,7 @@ private:
 
 class Knight : public Piece{
 public:
-    bool checkLegalMove(){}
+    bool checkLegalMove();
 
 private:
     Color color;
@@ -55,7 +57,7 @@ private:
 
 class Pawn : public Piece{
 public:
-    bool checkLegalMove(){}
+    bool checkLegalMove();
 
 private:
     Color color;
