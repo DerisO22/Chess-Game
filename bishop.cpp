@@ -1,6 +1,5 @@
-#include "chessPieces.h"
+#include "chessBoard.h"
 
-bool Bishop::checkLegalMove(){
-
-    return false;
+bool Bishop::movePiece(Piece* thisPiece, Piece* thatSpace){
+    
 }

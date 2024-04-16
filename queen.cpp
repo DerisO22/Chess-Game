@@ -1,6 +1,5 @@
-#include "chessPieces.h"
+#include "chessBoard.h"
 
-bool Queen::checkLegalMove(){
-
-    return false;
+bool Queen::movePiece(Piece* thisPiece, Piece* thatSpace){
+    
 }

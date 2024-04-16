@@ -1,6 +1,5 @@
-#include "chessPieces.h"
+#include "chessBoard.h"
 
-bool Rook::checkLegalMove(){
-
-    return false;
+bool Rook::movePiece(Piece* thisPiece, Piece* thatSpace){
+    
 }
