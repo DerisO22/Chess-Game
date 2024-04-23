@@ -25,16 +25,32 @@ Plagiarism checking)
 */
 #include "chessBoard.h"
 
-bool King::movePiece(Piece *thatSpace) {
-  //Detect Same Color
-  if(thatSpace->getColor() == this->getColor()){
-    return false;
-  }
-  
-  if (abs(thatSpace->getX() - this->getX()) <= 1 && abs(thatSpace->getY() - this->getY()) <= 1) {
-    // Additional code to ensure move doesn't place King into check would go here
-    return true;
-  } else {
-    return false;
-  }
+Piece::Piece() {
+  //Empty Piece Default Constructor
+  piece = ChessPiece::EMPTY;
+  color = PieceColor::NONE;
+}
+
+bool Piece::movePiece(Piece *thatSpace) {
+  //Empty Piece Base Class virtual function
+  std::cout << "Empty Base Piece" << std::endl;
+  return false;
+};
+
+void Piece::setEmpty() {
+  //Set an object as empty piece attributes
+  color = PieceColor::NONE;
+  piece = ChessPiece::EMPTY;
+}
+
+//Get Piece type
+ChessPiece Piece::getPiece() { return piece; }
+
+//Get Piece Color
+PieceColor Piece::getColor() { return color; }
+
+void Piece::setPieceAndColor(ChessPiece p, PieceColor c) {
+  //Sets piece type and color attributes
+  piece = p;
+  color = c;
 }
